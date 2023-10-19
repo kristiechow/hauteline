@@ -1042,7 +1042,7 @@
         nextItems.push(this.createItem({
           disabled: _disabled,
           picked: picked,
-          highlighted: nextViewYear === thisYear && nextViewMonth === thisMonth && date.getDate() === thisDay,
+          highlighted: nextViewYear === thisYear && nextViewMonth === thisMonth,
           muted: true,
           text: i,
           view: 'day next'
@@ -1076,7 +1076,7 @@
         items.push(this.createItem({
           disabled: _disabled2,
           picked: _picked,
-          highlighted: viewYear === thisYear && viewMonth === thisMonth && _date.getDate() === thisDay,
+          highlighted: viewYear === thisYear && viewMonth === thisMonth,
           text: i,
           view: _disabled2 ? 'day disabled' : view
         }));
