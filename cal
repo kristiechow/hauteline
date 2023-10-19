@@ -1076,7 +1076,6 @@
         items.push(this.createItem({
           disabled: _disabled2,
           picked: _picked,
-          highlighted: viewYear === thisYear && viewMonth === thisMonth,
           text: i,
           view: _disabled2 ? 'day disabled' : view
         }));
