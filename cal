@@ -954,7 +954,7 @@
       var prevItems = [];
       var prevViewYear = viewYear;
       var prevViewMonth = viewMonth;
-      var prevDisabled = false;
+      var prevDisabled = true;
 
       if (viewMonth === 0) {
         prevViewYear -= 1;
