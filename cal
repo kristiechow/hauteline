@@ -1081,7 +1081,7 @@
           view: _disabled2 ? 'day disabled' : view
         }));
       } // Render days picker
-      // -----------------------------------------------------------------------
+      // --------------------------------------------------------------------
 
 
       this.$monthPrev.toggleClass(disabledClass, prevDisabled);
