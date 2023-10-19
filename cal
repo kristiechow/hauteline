@@ -862,6 +862,7 @@
           disabled: disabled,
           text: viewYear + i,
           view: disabled ? 'year disabled' : view,
+          highlighted: date.getFullYear() === thisYear
         }));
       }
 
@@ -912,6 +913,7 @@
         items.push(this.createItem({
           disabled: disabled,
           picked: picked,
+          highlighted: viewYear === thisYear && date.getMonth() === thisMonth,
           index: i,
           text: months[i],
           view: disabled ? 'month disabled' : view
@@ -991,6 +993,7 @@
 
         prevItems.push(this.createItem({
           disabled: disabled,
+          highlighted: prevViewYear === thisYear && prevViewMonth === thisMonth && prevViewDate.getDate() === thisDay,
           muted: true,
           picked: prevViewYear === year && prevViewMonth === month && i === day,
           text: i,
@@ -1039,6 +1042,7 @@
         nextItems.push(this.createItem({
           disabled: _disabled,
           picked: picked,
+          highlighted: nextViewYear === thisYear && nextViewMonth === thisMonth && date.getDate() === thisDay,
           muted: true,
           text: i,
           view: 'day next'
