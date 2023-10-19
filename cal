@@ -992,7 +992,7 @@
         prevItems.push(this.createItem({
           disabled: disabled,
           muted: true,
-          picked: i === day,
+          picked: prevViewYear === year && prevViewMonth === month && i === day,
           text: i,
           view: 'day prev'
         }));
@@ -1025,7 +1025,7 @@
 
       for (i = 1; i <= n; i += 1) {
         var date = new Date(nextViewYear, nextViewMonth, i);
-        var picked = i === day;
+        var picked = nextViewYear === year && nextViewMonth === month && i === day;
         var _disabled = false;
 
         if (endDate) {
@@ -1066,7 +1066,7 @@
           _disabled2 = filter.call($element, _date, 'day') === false;
         }
 
-        var _picked = i === day;
+        var _picked = viewYear === year && viewMonth === month && i === day;
 
         var view = _picked ? 'day picked' : 'day';
         items.push(this.createItem({
@@ -1076,7 +1076,7 @@
           view: _disabled2 ? 'day disabled' : view
         }));
       } // Render days picker
-      // --------------------------------------------------------------------
+      // -----------------------------------------------------------------------
 
 
       this.$monthPrev.toggleClass(disabledClass, prevDisabled);
