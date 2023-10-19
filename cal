@@ -993,7 +993,7 @@
 
         prevItems.push(this.createItem({
           disabled: disabled,
-          highlighted: prevViewYear === thisYear && prevViewMonth === thisMonth && prevViewDate.getDate() === thisDay,
+          highlighted: prevViewYear === thisYear && prevViewMonth === thisMonth,
           muted: true,
           picked: prevViewYear === year && prevViewMonth === month && i === day,
           text: i,
