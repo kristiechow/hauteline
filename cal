@@ -1072,10 +1072,15 @@
 
         var _picked = viewYear === year && viewMonth === month && i === day;
 
+        var today = new Date();
+
+        var beforeToday = _date.getTime() < today;
+
         var view = _picked ? 'day picked' : 'day';
         items.push(this.createItem({
           disabled: _disabled2,
           picked: _picked,
+          muted: beforeToday,
           text: i,
           view: _disabled2 ? 'day disabled' : view
         }));
